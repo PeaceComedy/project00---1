@@ -1,3 +1,4 @@
+Marker2D
 Button
 VBoxContainer
 CenterContainer
@@ -6,7 +7,6 @@ Control
 MarginContainer
 TextureRect
 Label
-Marker2D
 CollisionShape2D
 Area2D
 TextEdit

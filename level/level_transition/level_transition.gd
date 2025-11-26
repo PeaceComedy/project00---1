@@ -1,7 +1,14 @@
 class_name LevelTransition
 extends Area2D
-#
-## 在编辑器里直接拖拽场景文件进来
-#@export_file("*.tscn") var target_scene_path: String 
-## 指定玩家去到新地图后的出生点标记（例如：从森林进入城镇，对应"Forest_Entrance"）
-#@export var target_entry_point: String = "" 
+
+# 对应着信号level_change_requested的两个参数
+@export_file("*.tscn") var target_scene_path: String
+@export var target_entry_point: String = ""
+
+func _ready() -> void:
+	body_entered.connect(_on_body_entered) # 信号连接：玩家进入区域
+
+func _on_body_entered(body: Node2D) -> void:
+	# 确认是玩家进入了区域（玩家在 "player"组，或者通过 class_name 判断），呼叫全局管理器
+	if body is Player or body.is_in_group("player"):
+		GlobalLevelManager.request_level_change(target_scene_path, target_entry_point) 
