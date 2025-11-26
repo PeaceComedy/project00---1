@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cuhmeprt1eop5"]
+
+[ext_resource type="Texture2D" uid="uid://fguvfkka0n7f" path="res://asset/YouTube Action RPG Resources/world/grass.png" id="1_d14sn"]
+[ext_resource type="Script" uid="uid://b8etrpch82u5p" path="res://entity/plant/grass/grass.gd" id="1_f34ti"]
+[ext_resource type="Texture2D" uid="uid://bn7u4ldod5vkw" path="res://asset/YouTube Action RPG Resources/effects/grass_effect.png" id="2_xe2g6"]
+[ext_resource type="Script" uid="uid://lta4n4khes26" path="res://system/damagebox_system/hurtbox.gd" id="4_alfv7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nduxg"]
+atlas = ExtResource("2_xe2g6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpjqc"]
+atlas = ExtResource("2_xe2g6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4tue"]
+atlas = ExtResource("2_xe2g6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms164"]
+atlas = ExtResource("2_xe2g6")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_top31"]
+atlas = ExtResource("2_xe2g6")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ju0k7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nduxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpjqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4tue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms164")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_top31")
+}],
+"loop": false,
+"name": &"destruction",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_d14sn")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d14sn"]
+size = Vector2(14, 14)
+
+[node name="Grass" type="Node2D"]
+script = ExtResource("1_f34ti")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ju0k7")
+animation = &"idle"
+
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 64
+collision_mask = 64
+script = ExtResource("4_alfv7")
+metadata/_custom_type_script = "uid://lta4n4khes26"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("RectangleShape2D_d14sn")

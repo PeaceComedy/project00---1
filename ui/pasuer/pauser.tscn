@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1ir18idfi8xy"]
+
+[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/pasuer/pauser.gd" id="1_w4br1"]
+
+[node name="Pauser" type="Node"]
+process_mode = 3
+script = ExtResource("1_w4br1")

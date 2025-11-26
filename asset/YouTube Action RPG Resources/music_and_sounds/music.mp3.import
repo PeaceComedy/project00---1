@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vo6v18yydqbg"
+path="res://.godot/imported/music.mp3-506061724cfd4189e29f912c1161ad9f.mp3str"
+
+[deps]
+
+source_file="res://asset/YouTube Action RPG Resources/music_and_sounds/music.mp3"
+dest_files=["res://.godot/imported/music.mp3-506061724cfd4189e29f912c1161ad9f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
