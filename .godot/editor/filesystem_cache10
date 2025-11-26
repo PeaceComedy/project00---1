@@ -1,10 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1764138423
+::res://::1764142893
 icon.svg::CompressedTexture2D::2223312987914026762::1763976480::1763976667::1::::<><><>0<>0<>b392b7eb4b0a9dbccbded1d2f37aa40d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://asset/::1763976667
+::res://asset/::1764140879
 icons8-obscene-gesture-50.png::CompressedTexture2D::1023691784843492243::1763976480::1763976667::1::::<><><>0<>0<>d2eec311d9dacf912169288a3219db4c<>res://.godot/imported/icons8-obscene-gesture-50.png-9c5d71552459a38d9341fdc065f2e603.ctex::
-::res://asset/font/::1763976667
+ParallaxBg_1.png::CompressedTexture2D::2306083652042001838::1764140879::1764140879::1::::<><><>0<>0<>23cea654378a9f11b8f84985b58693f1<>res://.godot/imported/ParallaxBg_1.png-778e708dce036672c64363d0c223055f.ctex::
+::res://asset/font/::1764141290
 pixel_rpg.ttf::FontFile::7936491959252267208::1763976480::1763976667::1::::<><><>0<>0<>cf3cab6ae91a4a2cf1c0bd1efbf3bfc3<>res://.godot/imported/pixel_rpg.ttf-f6ad59775d3e4e0367d571a26c6f9bb7.fontdata::
+Uranus_Pixel_11Px.ttf::FontFile::1453604417728395274::1764141289::1764141290::1::::<><><>0<>0<>310181921d21058885aef19f1e0c1f37<>res://.godot/imported/Uranus_Pixel_11Px.ttf-29d90c97407d266bc06fe5b63d7a7955.fontdata::
 ::res://asset/testcharacter/::1763976667
 tile_0084.png::CompressedTexture2D::8794191197669324902::1763976480::1763976667::1::::<><><>0<>0<>1035b71a60e4501b824113170b5a93a9<>res://.godot/imported/tile_0084.png-43ebeac6f7d620e84ee92208ac47ec54.ctex::
 tile_0085.png::CompressedTexture2D::8278898973289376486::1763976480::1763976667::1::::<><><>0<>0<>38f1e40230c951bfff5ddeb640433cb3<>res://.godot/imported/tile_0085.png-e54c77b2b234904e4f3d0d23469945fd.ctex::
@@ -21,7 +23,6 @@ tile_0111.png::CompressedTexture2D::6320517557060338524::1763976481::1763976667:
 tile_0112.png::CompressedTexture2D::2092620942656471786::1763976481::1763976667::1::::<><><>0<>0<>3f7d3298a3635f9f22230909d9c9b7cd<>res://.godot/imported/tile_0112.png-b1d9ab94e5f1a6bb06c9bd12e2b3fec6.ctex::
 角色-分离.png::CompressedTexture2D::7984520758147977889::1763976481::1763976667::1::::<><><>0<>0<>9bcf3b38bdb7e376f9bf23ad0cb1d652<>res://.godot/imported/角色-分离.png-334baa57f8328ef499d51011c7cd61b3.ctex::
 角色.png::CompressedTexture2D::7828288609177185233::1763976481::1763976667::1::::<><><>0<>0<>34ae18bd20ff26dac7a9650f87bc9469<>res://.godot/imported/角色.png-22be18d18113f9e3297234f020336e38.ctex::
-::res://asset/UI/::1763976480
 ::res://asset/YouTube Action RPG Resources/::1763976524
 ::res://asset/YouTube Action RPG Resources/effects/::1763976667
 enemy_death_effect.png::CompressedTexture2D::2869059866405186236::1763976483::1763976667::1::::<><><>0<>0<>85626f432e85ffc31739f9eed36cb066<>res://.godot/imported/enemy_death_effect.png-8aab173234eee2561804c606db148f7a.ctex::
@@ -56,14 +57,14 @@ dirt_tileset.png::CompressedTexture2D::4630374935254229604::1763976485::17639766
 grass.png::CompressedTexture2D::364582604762000513::1763976485::1763976667::1::::<><><>0<>0<>de9b38c52a007595deaf003a0781dc8a<>res://.godot/imported/grass.png-1b71cf5ed58b9fee207ab4adcde759e5.ctex::
 grass_background.png::CompressedTexture2D::897211632151500369::1763976485::1763976667::1::::<><><>0<>0<>4466c621756187bb6870ff732326a3f1<>res://.godot/imported/grass_background.png-7772ac50614ade5fcb36548acb2bb82b.ctex::
 tree.png::CompressedTexture2D::7916006428590435120::1763976485::1763976667::1::::<><><>0<>0<>45c80dc60678a5730e282db25701c36b<>res://.godot/imported/tree.png-5923bd8d6bc70864fce2503980a74e6a.ctex::
-::res://autoload/::1764071342
-global_level_manager.gd::GDScript::67710110018923273::1764071342::0::1::::<>RefCounted<><>0<>0<><>::
+::res://autoload/::1764141742
+global_level_manager.gd::GDScript::67710110018923273::1764141742::0::1::::<>Node<><>0<>0<><>::
 global_player_manager.gd::GDScript::5282286137562732939::1764069323::0::1::::<>Node<><>0<>0<><>::
 ::res://entity/::1764138423
 ::res://entity/enemy/::1763993596
-::res://entity/enemy/bat_emeny/::1764138423
+::res://entity/enemy/bat_emeny/::1764138678
 bat_emeny.gd::GDScript::9222033632025833177::1763976482::0::1::::<>CharacterBody2D<><>0<>0<><>::
-bat_emeny.tscn::PackedScene::1235989744947454903::1764138423::0::1::::<><><>0<>0<><>::uid://d4nhst3ep5pyn::::res://entity/enemy/bat_emeny/bat_emeny.gd<>uid://poky0v6gruoe::::res://asset/YouTube Action RPG Resources/enemies/bat.png<>uid://bl5sgefq0pwuw::::res://asset/YouTube Action RPG Resources/shadows/small_shadow.png<>uid://3526k5utonog::::res://system/stats_system/stats.gd<>uid://lta4n4khes26::::res://system/damagebox_system/hurtbox.gd<>uid://cj6vsdp3mjx6x::::res://system/damagebox_system/hitbox.gd
+bat_emeny.tscn::PackedScene::1235989744947454903::1764138678::0::1::::<><><>0<>0<><>::uid://d4nhst3ep5pyn::::res://entity/enemy/bat_emeny/bat_emeny.gd<>uid://poky0v6gruoe::::res://asset/YouTube Action RPG Resources/enemies/bat.png<>uid://bl5sgefq0pwuw::::res://asset/YouTube Action RPG Resources/shadows/small_shadow.png<>uid://3526k5utonog::::res://system/stats_system/stats.gd<>uid://lta4n4khes26::::res://system/damagebox_system/hurtbox.gd<>uid://cj6vsdp3mjx6x::::res://system/damagebox_system/hitbox.gd
 ::res://entity/plant/::1763994256
 bush.tscn::PackedScene::808596375556781384::1763976481::0::1::::<><><>0<>0<><>::uid://cfqmutxnjwy3f::::res://asset/YouTube Action RPG Resources/world/bush.png<>uid://cky4jlmftyv2c::::res://asset/YouTube Action RPG Resources/shadows/large_shadow.png
 tree.tscn::PackedScene::1554918640321702428::1763976482::0::1::::<><><>0<>0<><>::uid://dk1tp7s1okjme::::res://asset/YouTube Action RPG Resources/world/tree.png<>uid://cky4jlmftyv2c::::res://asset/YouTube Action RPG Resources/shadows/large_shadow.png
@@ -75,14 +76,14 @@ player.gd::GDScript::2467509807148989858::1763996935::0::1::::Player<>CharacterB
 player.tscn::PackedScene::2029924280385440241::1764068000::0::1::::<><><>0<>0<><>::uid://bbfjr5csgh24e::::res://entity/player/player.gd<>uid://b32ox37bdicrp::::res://asset/YouTube Action RPG Resources/player/player.png<>uid://cu7mhlacho7o0::::res://entity/player/player_stats.tres<>uid://cdw0wnnskleja::::res://asset/YouTube Action RPG Resources/shadows/medium_shadow.png<>uid://cj6vsdp3mjx6x::::res://system/damagebox_system/hitbox.gd<>uid://lta4n4khes26::::res://system/damagebox_system/hurtbox.gd
 player_stats.tres::Resource/Stats::6243420010604958997::1763994325::0::1::::<><><>0<>0<><>::uid://3526k5utonog::::res://system/stats_system/stats.gd
 ::res://level/::1764071809
-::res://level/level_01/::1764138423
+::res://level/level_01/::1764138451
 level_01.gd::GDScript::8210162698501368455::1764070643::0::1::::<>Node2D<><>0<>0<><>::
-level_01.tscn::PackedScene::8226052955353905824::1764138451::0::1::::<><><>0<>0<><>::uid://b07nn1ib0kduk::::res://ui/pasuer/pauser.gd<>uid://do8cgehu5vswl::::res://level/level_01/level_01.gd<>uid://m1u7d3ryfxfd::::res://asset/YouTube Action RPG Resources/world/grass_background.png<>uid://lrxp1twonrq3::::res://entity/plant/bush.tscn<>uid://t4voj8ji28is::::res://level/tileset/cliff_tileset.tres<>uid://wfhju7lox5qm::::res://entity/plant/tree.tscn<>uid://b678umcoff6bo::::res://asset/YouTube Action RPG Resources/world/dirt_tileset.png<>uid://cuhmeprt1eop5::::res://entity/plant/grass/grass.tscn<>uid://ruytnrw8fqjn::::res://entity/enemy/bat_emeny/bat_emeny.tscn<>uid://6j38g5whfif7::::res://ui/heart_ui/heart_ui.tscn<>uid://dkbr7sovueid7::::res://level/player_spawn/player_spawn.tscn<>uid://6pyx3dejriey::::res://level/level_transition/level_transition.tscn
-::res://level/level_02/::1764138423
-level_02.tscn::PackedScene::2351127447779070526::1764138451::0::1::::<><><>0<>0<><>::uid://m1u7d3ryfxfd::::res://asset/YouTube Action RPG Resources/world/grass_background.png<>uid://b678umcoff6bo::::res://asset/YouTube Action RPG Resources/world/dirt_tileset.png<>uid://t4voj8ji28is::::res://level/tileset/cliff_tileset.tres<>uid://lrxp1twonrq3::::res://entity/plant/bush.tscn<>uid://wfhju7lox5qm::::res://entity/plant/tree.tscn<>uid://cuhmeprt1eop5::::res://entity/plant/grass/grass.tscn<>uid://ruytnrw8fqjn::::res://entity/enemy/bat_emeny/bat_emeny.tscn<>uid://b07nn1ib0kduk::::res://ui/pasuer/pauser.gd<>uid://6j38g5whfif7::::res://ui/heart_ui/heart_ui.tscn<>uid://dkbr7sovueid7::::res://level/player_spawn/player_spawn.tscn<>uid://6pyx3dejriey::::res://level/level_transition/level_transition.tscn
-::res://level/level_transition/::1764136302
-level_transition.gd::GDScript::8346736037953268623::1764136302::0::1::::LevelTransiton<>Area2D<><>0<>1<><>::
-level_transition.tscn::PackedScene::2208319575658771864::1764136197::0::1::::<><><>0<>0<><>::uid://dq6hr1w2sf70v::::res://level/level_transition/level_transition.gd
+level_01.tscn::PackedScene::8226052955353905824::1764138451::0::1::::<><><>0<>0<><>::uid://b07nn1ib0kduk::::res://ui/pauser/pauser.gd<>uid://do8cgehu5vswl::::res://level/level_01/level_01.gd<>uid://m1u7d3ryfxfd::::res://asset/YouTube Action RPG Resources/world/grass_background.png<>uid://lrxp1twonrq3::::res://entity/plant/bush.tscn<>uid://t4voj8ji28is::::res://level/tileset/cliff_tileset.tres<>uid://wfhju7lox5qm::::res://entity/plant/tree.tscn<>uid://b678umcoff6bo::::res://asset/YouTube Action RPG Resources/world/dirt_tileset.png<>uid://cuhmeprt1eop5::::res://entity/plant/grass/grass.tscn<>uid://ruytnrw8fqjn::::res://entity/enemy/bat_emeny/bat_emeny.tscn<>uid://6j38g5whfif7::::res://ui/heart_ui/heart_ui.tscn<>uid://dkbr7sovueid7::::res://level/player_spawn/player_spawn.tscn<>uid://6pyx3dejriey::::res://level/level_transition/level_transition.tscn
+::res://level/level_02/::1764138451
+level_02.tscn::PackedScene::2351127447779070526::1764138451::0::1::::<><><>0<>0<><>::uid://m1u7d3ryfxfd::::res://asset/YouTube Action RPG Resources/world/grass_background.png<>uid://b678umcoff6bo::::res://asset/YouTube Action RPG Resources/world/dirt_tileset.png<>uid://t4voj8ji28is::::res://level/tileset/cliff_tileset.tres<>uid://lrxp1twonrq3::::res://entity/plant/bush.tscn<>uid://wfhju7lox5qm::::res://entity/plant/tree.tscn<>uid://cuhmeprt1eop5::::res://entity/plant/grass/grass.tscn<>uid://ruytnrw8fqjn::::res://entity/enemy/bat_emeny/bat_emeny.tscn<>uid://b07nn1ib0kduk::::res://ui/pauser/pauser.gd<>uid://6j38g5whfif7::::res://ui/heart_ui/heart_ui.tscn<>uid://dkbr7sovueid7::::res://level/player_spawn/player_spawn.tscn<>uid://6pyx3dejriey::::res://level/level_transition/level_transition.tscn
+::res://level/level_transition/::1764142286
+level_transition.gd::GDScript::8346736037953268623::1764142286::0::1::::LevelTransition<>Area2D<><>0<>0<><>::
+level_transition.tscn::PackedScene::2208319575658771864::1764138476::0::1::::<><><>0<>0<><>::uid://dq6hr1w2sf70v::::res://level/level_transition/level_transition.gd
 ::res://level/player_spawn/::1764070730
 player_spawn.tscn::PackedScene::7864305167524274982::1764070730::0::1::::<><><>0<>0<><>::
 ::res://level/tileset/::1764138423
@@ -116,10 +117,13 @@ dialogue_group.gd::GDScript::8586849270867493428::1763976482::0::1::::DialogueGr
 dialogue_manager.gd::GDScript::8852652450435038406::1763976482::0::1::::<>Control<><>0<>0<><>::
 ::res://system/stats_system/::1763976524
 stats.gd::GDScript::2028914245414744886::1763976482::0::1::::Stats<>Resource<><>0<>0<><>::
-::res://ui/::1763994202
+::res://ui/::1764140408
 ::res://ui/heart_ui/::1763994191
 heart_ui.gd::GDScript::443221192697830591::1763976482::0::1::::<>Control<><>0<>0<><>::
 heart_ui.tscn::PackedScene::2196192922055237442::1763994191::0::1::::<><><>0<>0<><>::uid://gkx12i5bpedb::::res://ui/heart_ui/heart_ui.gd<>uid://dgqtmrrqiunw5::::res://asset/YouTube Action RPG Resources/ui/heart_ui_empty.png<>uid://cu7mhlacho7o0::::res://entity/player/player_stats.tres<>uid://b0ltffd5x4hgy::::res://asset/YouTube Action RPG Resources/ui/heart_ui_full.png
-::res://ui/pasuer/::1763994202
+::res://ui/main_menu/::1764142769
+main_menu.gd::GDScript::2513597059692051434::1764142769::0::1::::<>Control<><>0<>0<><>::
+main_menu.tscn::PackedScene::6729752048722435328::1764142766::0::1::::<><><>0<>0<><>::uid://74c4jd55s27s::::res://asset/ParallaxBg_1.png<>uid://bb2utuifg4hok::::res://ui/main_menu/main_menu.gd<>uid://uyewgfmr7n1s::::res://asset/font/Uranus_Pixel_11Px.ttf
+::res://ui/pauser/::1764138451
 pauser.gd::GDScript::4208015777045331262::1763976483::0::1::::Pauser<>Node<><>0<>0<><>::
-pauser.tscn::PackedScene::4228926005605309850::1763994202::0::1::::<><><>0<>0<><>::uid://b07nn1ib0kduk::::res://ui/pasuer/pauser.gd
+pauser.tscn::PackedScene::4228926005605309850::1764138451::0::1::::<><><>0<>0<><>::uid://b07nn1ib0kduk::::res://ui/pauser/pauser.gd

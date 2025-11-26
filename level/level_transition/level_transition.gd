@@ -1,4 +1,3 @@
-@tool
 class_name LevelTransition
 extends Area2D
 #
