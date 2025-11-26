@@ -1,5 +1,5 @@
 @tool
-class_name LevelTransiton
+class_name LevelTransition
 extends Area2D
 #
 ## 在编辑器里直接拖拽场景文件进来

@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://dpg05jhwpbdme"]
 
-[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/pasuer/pauser.gd" id="1_4mi5g"]
+[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/pauser/pauser.gd" id="1_4mi5g"]
 [ext_resource type="Script" uid="uid://do8cgehu5vswl" path="res://level/level_01/level_01.gd" id="1_b42xx"]
 [ext_resource type="Texture2D" uid="uid://m1u7d3ryfxfd" path="res://asset/YouTube Action RPG Resources/world/grass_background.png" id="1_sopxd"]
 [ext_resource type="PackedScene" uid="uid://lrxp1twonrq3" path="res://entity/plant/bush.tscn" id="3_dp1oe"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://wfhju7lox5qm" path="res://entity/plant/tree.tscn" id="4_3td6k"]
 [ext_resource type="Texture2D" uid="uid://b678umcoff6bo" path="res://asset/YouTube Action RPG Resources/world/dirt_tileset.png" id="5_dp1oe"]
 [ext_resource type="PackedScene" uid="uid://cuhmeprt1eop5" path="res://entity/plant/grass/grass.tscn" id="7_se62r"]
-[ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/emeny/bat_emeny/bat_emeny.tscn" id="8_y1ys1"]
+[ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="8_y1ys1"]
 [ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://ui/heart_ui/heart_ui.tscn" id="9_mtuhj"]
 [ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn/player_spawn.tscn" id="11_4x7d3"]
 [ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="12_kdgnc"]
@@ -469,4 +469,3 @@ position = Vector2(-24, 256)
 
 [node name="LevelTransition" parent="." instance=ExtResource("12_kdgnc")]
 position = Vector2(304, -144)
-target_entry_point = "LevelTransiton"
