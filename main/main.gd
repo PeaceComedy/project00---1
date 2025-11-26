@@ -10,20 +10,21 @@ extends Node
 
 func _ready():
 	GlobalPlayerManager.player_scene = default_player # 初始化全局玩家配置
-	load_level(first_level) # 加载第一关
+	load_main_menu() # 加载主菜单
+
 
 func load_main_menu(): # 加载主菜单
 	_clear_world() # 清空旧关卡
 	if main_menu_scene:
 		var menu_instance = main_menu_scene.instantiate() # 实例化主菜单
 		gui.add_child(menu_instance)
-		if menu_instance.has_signal("start_game"): # 接受信号：点了start
-			menu_instance.start_game.connect(_on_game_started)
+		# 连接信号：当菜单发出"start_game"时，执行_on_game_started
+		if menu_instance.has_signal("start_game"): 
+			menu_instance.start_game.connect(_on_game_start)
 
-func _on_game_started(): # 开始游戏(信号回调)
-	for child in gui.get_children(): # 清除 GUI 里的主菜单
+func _on_game_start(): # 开始游戏
+	for child in gui.get_children(): # 清除GUI里的主菜单
 		child.queue_free()
-	
 	load_level(first_level) # 加载第一关
 
 func load_level(level_packed: PackedScene): # 加载关卡

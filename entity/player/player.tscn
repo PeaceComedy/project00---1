@@ -280,7 +280,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_732fb"]
 resource_name = "run_down"
-length = 0.5
+length = 0.6
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -298,7 +298,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_qjg4s"]
 resource_name = "run_left"
-length = 0.5
+length = 0.6
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -311,12 +311,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [13, 14, 15, 16, 17, 18]
+"values": [12, 13, 14, 15, 16, 17]
 }
 
 [sub_resource type="Animation" id="Animation_ajqqa"]
 resource_name = "run_right"
-length = 0.5
+length = 0.6
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -329,12 +329,12 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [1, 2, 3, 4, 5, 1]
+"values": [0, 1, 2, 3, 4, 5]
 }
 
 [sub_resource type="Animation" id="Animation_pisg7"]
 resource_name = "run_up"
-length = 0.5
+length = 0.6
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -347,7 +347,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [7, 8, 9, 10, 11, 6]
+"values": [6, 7, 8, 9, 10, 11]
 }
 
 [sub_resource type="Animation" id="Animation_rkmeh"]
@@ -527,7 +527,7 @@ states/StandState/node = SubResource("AnimationNodeBlendSpace2D_aoq8s")
 states/StandState/position = Vector2(416, 100)
 states/Start/position = Vector2(187, 100)
 transitions = ["Start", "StandState", SubResource("AnimationNodeStateMachineTransition_740qy"), "StandState", "RunState", SubResource("AnimationNodeStateMachineTransition_cm2cf"), "RunState", "StandState", SubResource("AnimationNodeStateMachineTransition_6smn3")]
-graph_offset = Vector2(-2, -42)
+graph_offset = Vector2(-64, 8)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_rkmeh"]
 animation = &"roll_left"
@@ -575,11 +575,12 @@ states/MoveState/position = Vector2(528, 100)
 states/RollState/node = SubResource("AnimationNodeBlendSpace2D_oypl4")
 states/RollState/position = Vector2(528, 13)
 transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTransition_04bvi"), "MoveState", "AttackState", SubResource("AnimationNodeStateMachineTransition_732fb"), "AttackState", "MoveState", SubResource("AnimationNodeStateMachineTransition_hfhxk"), "MoveState", "RollState", SubResource("AnimationNodeStateMachineTransition_qjg4s"), "RollState", "MoveState", SubResource("AnimationNodeStateMachineTransition_1wtbu")]
-graph_offset = Vector2(176, -53)
+graph_offset = Vector2(105, -5)
 
 [sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_6smn3"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_egxbn"]
+graph_offset = Vector2(-353, 131)
 nodes/output/position = Vector2(360, 180)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_nqjai")
 nodes/StateMachine/position = Vector2(-120, 180)

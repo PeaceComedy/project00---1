@@ -1,5 +1,14 @@
-res://ui/main_menu/main_menu.gd
-res://ui/main_menu/main_menu.tscn
+res://entity/player/player.gd
+res://entity/player/player.tscn
 res://level/tileset/cliff_tileset.tres
+res://entity/enemy/bat_emeny/bat_emeny.tscn
+res://entity/enemy/bat_emeny/bat_emeny.gd
+res://ui/pauser/pauser.tscn
+res://ui/pauser/pauser.gd
+res://level/level_01/level_01.tscn
+res://level/level_02/level_02.tscn
+res://ui/pauser_menu/pauser.tscn
+res://ui/pauser_menu/pauser_menu.gd
+res://ui/pauser_menu/pauser_menu.tscn
+res://ui/main_menu/main_menu.tscn
 res://main/main.gd
-res://main/main.tscn

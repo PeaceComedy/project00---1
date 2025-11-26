@@ -19,7 +19,7 @@ func _ready() -> void:
 	stats.no_health.connect(queue_free) # 没血时消失
 
 func _physics_process(delta: float) -> void:
-	var state = playback.get_current_node() # 定义变量：状态，等同于获取动画树中当前状态
+	var state = playback.get_current_node() # 状态，等同于获取动画树中当前状态
 	match state: # 匹配执行不同的状态
 		"IdleState": pass # 处在待机状态时
 		"ChaseState": # 进入追逐状态时
@@ -36,17 +36,17 @@ func _physics_process(delta: float) -> void:
 			velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 			move_and_slide()
 
-func take_hit(other_hitbox: Hitbox) -> void: # 定义函数：变为击退状态
+func take_hit(other_hitbox: Hitbox) -> void: # 变为击退状态
 		stats.health -= other_hitbox.damage # 击退时，受到指定伤害扣除血量
 		# 击退速度=受击方向*hitbox的击退量
 		velocity = other_hitbox.knockback_direction * other_hitbox.knockback_amount
 		playback.start("HitState")
 		print("change to the hitstate")
 
-func get_player() -> Player: # 定义函数：获取玩家，并返回Player对象获取其自动补全
+func get_player() -> Player: # 获取玩家，并返回Player对象获取其自动补全
 	return get_tree().get_first_node_in_group("player") # 获取player分组中第一个节点的场景树
-	
-func is_player_in_range() -> bool: # 定义函数：检查玩家是否是在仇恨范围内
+
+func is_player_in_range() -> bool: # 检查玩家是否是在仇恨范围内
 	var result = false # 定义变量：默认结果为false
 	
 	var player := get_player()
@@ -57,7 +57,7 @@ func is_player_in_range() -> bool: # 定义函数：检查玩家是否是在仇�
 			result = true
 	return result # 返回结果
 
-func can_see_player()-> bool: # 定义函数：能否看见玩家
+func can_see_player()-> bool: # 能否看见玩家
 	if not is_player_in_range(): return false # 如果不在范围内，返回false
 	
 	var player:= get_player()

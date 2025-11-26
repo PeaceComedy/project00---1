@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://wfhju7lox5qm" path="res://entity/plant/tree.tscn" id="5_7ehku"]
 [ext_resource type="PackedScene" uid="uid://cuhmeprt1eop5" path="res://entity/plant/grass/grass.tscn" id="6_ccolt"]
 [ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="7_ccrno"]
-[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/pauser/pauser.gd" id="8_vh628"]
+[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/pauser_menu/pauser_menu.gd" id="8_vh628"]
 [ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://ui/heart_ui/heart_ui.tscn" id="9_weey5"]
 [ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn/player_spawn.tscn" id="10_7b8ce"]
 [ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="11_h0go8"]

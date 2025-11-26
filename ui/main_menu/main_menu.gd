@@ -8,6 +8,7 @@ signal start_game # 定义信号：告诉外部（Main）点了start
 
 func _ready() -> void:
 	get_tree().paused = false # 确保游戏开始时不暂停（防止从暂停菜单退回主界面后游戏卡死）
+	start_button.pressed.connect(_on_start_button_pressed)
 	settings_button.pressed.connect(_on_settings_button_pressed)
 	quit_button.pressed.connect(_on_quit_button_pressed)
 

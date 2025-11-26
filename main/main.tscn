@@ -11,6 +11,6 @@ main_menu_scene = ExtResource("2_c651c")
 default_player = ExtResource("2_xwkvk")
 first_level = ExtResource("2_pjrb6")
 
-[node name="GUI" type="CanvasLayer" parent="."]
-
 [node name="WorldContainer" type="Node2D" parent="."]
+
+[node name="GUI" type="CanvasLayer" parent="."]
