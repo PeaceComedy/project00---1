@@ -37,7 +37,14 @@ func die() -> void: # 死亡
 	remove_from_group("player") # 移出组，确保敌人不会在玩家死后抽风
 	process_mode = Node.PROCESS_MODE_DISABLED # 节点处理属性变为禁用，确保摄像机定在死亡位置
 	GlobalPlayerManager.player_died.emit() # # 通知全局管理器玩家死了
-	
+
+func revive() -> void:
+	stats.health = stats.max_health # 恢复满血
+	process_mode = Node.PROCESS_MODE_INHERIT # 恢复处理（允许移动和输入）
+	show() # 重新显示并加回分组,让敌人能再次看见
+	if not is_in_group("player"):
+		add_to_group("player")
+
 func take_hit(other_hitbox: Hitbox) -> void: # 定义函数：变为击退状态
 	stats.health -= other_hitbox.damage # 击退时，受到指定伤害扣除血量
 	blink_animation_player.play("Blink") # 播放闪烁动画，同时有无敌帧

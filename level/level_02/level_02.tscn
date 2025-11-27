@@ -463,7 +463,7 @@ metadata/_edit_use_anchors_ = true
 visible = false
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("11_hw0fb")]
-position = Vector2(-24, 256)
+position = Vector2(160, 72)
 
 [node name="Entrance" type="Node2D" parent="."]
 position = Vector2(-72, 384)

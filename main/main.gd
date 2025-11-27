@@ -49,7 +49,7 @@ func _on_global_level_changed(next_scene_path: String, target_point_name: String
 			GlobalPlayerManager.player.global_position = entry_point.global_position
 
 func _on_player_died(): # 玩家死亡处理
-	if game_over_menu_scene:
+	if game_over_menu_scene: # 实例化GameOver界面
 		var game_over_instance = game_over_menu_scene.instantiate()
 		gui.add_child(game_over_instance)
 		if game_over_instance.has_signal("respawn_requested"): # 连接UI的重生信号
@@ -58,7 +58,14 @@ func _on_player_died(): # 玩家死亡处理
 func _on_respawn(): # 重生逻辑
 	for child in gui.get_children(): # 清除Game Over界面
 		child.queue_free()
-
+	
+	var player = GlobalPlayerManager.player # 获取现有信息
+	# 获取当前正在运行的关卡节点,也就是WorldContainer下第一个节点
+	var current_level_node = world_container.get_child(0)
+	if current_level_node and player:
+		var spawn_point = current_level_node.find_child("PlayerSpawn") # 在当前地图里找出生点
+		player.global_position = spawn_point.global_position # 搬运玩家
+		player.revive() # 唤醒玩家
 
 func _clear_world(): # 辅助函数：清空世界容器
 	for child in world_container.get_children():
