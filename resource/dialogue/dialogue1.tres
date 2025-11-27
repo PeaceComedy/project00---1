@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="DialogueGroup" load_steps=9 format=3 uid="uid://bk4rxbe66jig1"]
+
+[ext_resource type="Script" uid="uid://hdggwukhajja" path="res://resource/dialogue/dialogue.gd" id="1_6e5yf"]
+[ext_resource type="Texture2D" uid="uid://dxj8brcm6ilw5" path="res://asset/testcharacter/tile_0084.png" id="2_10an1"]
+[ext_resource type="Texture2D" uid="uid://dp7miystljyx7" path="res://asset/testcharacter/tile_0085.png" id="3_jyf6t"]
+[ext_resource type="Script" uid="uid://dulsfg2a7y76w" path="res://resource/dialogue/dialogue_group.gd" id="4_6t08o"]
+
+[sub_resource type="Resource" id="Resource_12xai"]
+script = ExtResource("1_6e5yf")
+character_name = "张三"
+content = "我们有一个BackgroundLayer类，它用于管理背景的切换，支持立即切换和淡入淡出过渡"
+avatar = ExtResource("2_10an1")
+show_on_left = true
+metadata/_custom_type_script = "uid://hdggwukhajja"
+
+[sub_resource type="Resource" id="Resource_87038"]
+script = ExtResource("1_6e5yf")
+character_name = "李四"
+content = "现在需要添加一个函数，用于平滑过渡到新的背景（淡入淡出效果）。"
+avatar = ExtResource("3_jyf6t")
+metadata/_custom_type_script = "uid://hdggwukhajja"
+
+[sub_resource type="Resource" id="Resource_q1y6y"]
+script = ExtResource("1_6e5yf")
+character_name = "张三"
+content = "我们将创建一个函数set_background_transition(next_bg_path: String)"
+avatar = ExtResource("2_10an1")
+show_on_left = true
+metadata/_custom_type_script = "uid://hdggwukhajja"
+
+[sub_resource type="Resource" id="Resource_eqp7k"]
+script = ExtResource("1_6e5yf")
+character_name = "李四"
+content = "它将在给定的过渡时间内从当前背景淡出到新的背景"
+avatar = ExtResource("3_jyf6t")
+metadata/_custom_type_script = "uid://hdggwukhajja"
+
+[resource]
+script = ExtResource("4_6t08o")
+dialogue_list = Array[ExtResource("1_6e5yf")]([SubResource("Resource_12xai"), SubResource("Resource_87038"), SubResource("Resource_q1y6y"), SubResource("Resource_eqp7k")])
+metadata/_custom_type_script = "uid://dulsfg2a7y76w"

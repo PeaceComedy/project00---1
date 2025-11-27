@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://b7ivi8xr108w6"]
+
+[ext_resource type="Texture2D" uid="uid://bpyto54jwwdju" path="res://asset/MF_Items/MF_Items_craft_7.png" id="1_aooi4"]
+[ext_resource type="Script" uid="uid://dyq8n6or542wv" path="res://resource/item/item.gd" id="1_jyohv"]
+
+[resource]
+script = ExtResource("1_jyohv")
+name = "HealthPotion"
+icon = ExtResource("1_aooi4")
+description = "回血的"
+metadata/_custom_type_script = "uid://dyq8n6or542wv"

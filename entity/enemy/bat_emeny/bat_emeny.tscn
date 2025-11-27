@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://d4nhst3ep5pyn" path="res://entity/enemy/bat_emeny/bat_emeny.gd" id="1_8kfjd"]
 [ext_resource type="Texture2D" uid="uid://poky0v6gruoe" path="res://asset/YouTube Action RPG Resources/enemies/bat.png" id="1_w7m08"]
 [ext_resource type="Texture2D" uid="uid://bl5sgefq0pwuw" path="res://asset/YouTube Action RPG Resources/shadows/small_shadow.png" id="2_8kfjd"]
-[ext_resource type="Script" uid="uid://3526k5utonog" path="res://system/stats_system/stats.gd" id="2_8yl8f"]
-[ext_resource type="Script" uid="uid://lta4n4khes26" path="res://system/damagebox_system/hurtbox.gd" id="4_37m8c"]
-[ext_resource type="Script" uid="uid://cj6vsdp3mjx6x" path="res://system/damagebox_system/hitbox.gd" id="6_0bcub"]
+[ext_resource type="Script" uid="uid://3526k5utonog" path="res://resource/stats/stats.gd" id="2_8yl8f"]
+[ext_resource type="Script" uid="uid://lta4n4khes26" path="res://damagebox/hurtbox.gd" id="4_37m8c"]
+[ext_resource type="Script" uid="uid://cj6vsdp3mjx6x" path="res://damagebox/hitbox.gd" id="6_0bcub"]
 
 [sub_resource type="Resource" id="Resource_0bcub"]
 script = ExtResource("2_8yl8f")

@@ -45,7 +45,7 @@ func revive() -> void:
 	if not is_in_group("player"):
 		add_to_group("player")
 
-func take_hit(other_hitbox: Hitbox) -> void: # 定义函数：变为击退状态
+func take_hit(other_hitbox: Hitbox) -> void: # 变为击退状态
 	stats.health -= other_hitbox.damage # 击退时，受到指定伤害扣除血量
 	blink_animation_player.play("Blink") # 播放闪烁动画，同时有无敌帧
 	
@@ -74,8 +74,7 @@ func roll_state(delta: float) -> void: # 翻滚状态，并接受与物理过程
 	move_and_slide()
 	
 	
-# 更新混合位置，用以处理状态机在更新各状态的动画
-func update_blend_position(directon_vector: Vector2) -> void:
+func update_blend_position(directon_vector: Vector2) -> void: # 更新混合位置，处理状态机更新各状态的动画
 	animation_tree.set("parameters/StateMachine/MoveState/RunState/blend_position", input_vector)
 	animation_tree.set("parameters/StateMachine/MoveState/StandState/blend_position", input_vector)
 	animation_tree.set("parameters/StateMachine/AttackState/blend_position", input_vector)

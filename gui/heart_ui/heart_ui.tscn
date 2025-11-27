@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://gkx12i5bpedb" path="res://gui/heart_ui/heart_ui.gd" id="1_jlu7v"]
 [ext_resource type="Texture2D" uid="uid://dgqtmrrqiunw5" path="res://asset/YouTube Action RPG Resources/ui/heart_ui_empty.png" id="1_nfg6y"]
-[ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://entity/player/player_stats.tres" id="2_860jt"]
+[ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://resource/stats/player_stats.tres" id="2_860jt"]
 [ext_resource type="Texture2D" uid="uid://b0ltffd5x4hgy" path="res://asset/YouTube Action RPG Resources/ui/heart_ui_full.png" id="2_jlu7v"]
 
 [node name="HeartUI" type="Control"]

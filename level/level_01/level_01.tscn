@@ -1,6 +1,6 @@
-[gd_scene load_steps=15 format=4 uid="uid://dpg05jhwpbdme"]
+[gd_scene load_steps=17 format=4 uid="uid://dpg05jhwpbdme"]
 
-[ext_resource type="Script" uid="uid://do8cgehu5vswl" path="res://level/level_01/level_01.gd" id="1_b42xx"]
+[ext_resource type="Script" uid="uid://do8cgehu5vswl" path="res://level/level.gd" id="1_b42xx"]
 [ext_resource type="Texture2D" uid="uid://m1u7d3ryfxfd" path="res://asset/YouTube Action RPG Resources/world/grass_background.png" id="1_sopxd"]
 [ext_resource type="PackedScene" uid="uid://lrxp1twonrq3" path="res://entity/plant/bush.tscn" id="3_dp1oe"]
 [ext_resource type="TileSet" uid="uid://t4voj8ji28is" path="res://level/tileset/cliff_tileset.tres" id="3_ydhjj"]
@@ -10,8 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="8_y1ys1"]
 [ext_resource type="PackedScene" uid="uid://b1ir18idfi8xy" path="res://gui/menu/pauser_menu/pauser_menu.tscn" id="9_bgdb8"]
 [ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://gui/heart_ui/heart_ui.tscn" id="9_mtuhj"]
-[ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn/player_spawn.tscn" id="11_4x7d3"]
+[ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn.tscn" id="11_4x7d3"]
 [ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="12_kdgnc"]
+[ext_resource type="PackedScene" uid="uid://5cyolwedml1d" path="res://level/pickup/Pickup.tscn" id="13_xopy7"]
+[ext_resource type="Resource" uid="uid://b7ivi8xr108w6" path="res://resource/item/consumables/health_potion.tres" id="14_gw4w3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2vst"]
 texture = ExtResource("5_dp1oe")
@@ -469,9 +471,13 @@ position = Vector2(-24, 256)
 position = Vector2(-72, 384)
 
 [node name="FromLevel02" type="Marker2D" parent="Entrance"]
-position = Vector2(368, -504)
+position = Vector2(368, -496)
 
 [node name="LevelTransition" parent="." instance=ExtResource("12_kdgnc")]
 position = Vector2(312, -144)
 target_scene_path = "uid://8q5yw0pfh26m"
 target_entry_point = "FromLevel01"
+
+[node name="Pickup" parent="." instance=ExtResource("13_xopy7")]
+position = Vector2(160, 144)
+item_resource = ExtResource("14_gw4w3")

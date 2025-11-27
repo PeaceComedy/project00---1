@@ -4,7 +4,6 @@ extends Node
 @export var game_over_menu_scene: PackedScene # 死亡菜单
 @export var default_player: PackedScene # 默认玩家
 @export var first_level: PackedScene # 初始关卡
-
 @onready var world_container: Node2D = $WorldContainer
 @onready var gui: CanvasLayer = $GUI
 
@@ -56,8 +55,7 @@ func _on_player_died(): # 玩家死亡处理
 			game_over_instance.respawn_requested.connect(_on_respawn)
 
 func _on_respawn(): # 重生逻辑
-	for child in gui.get_children(): # 清除Game Over界面
-		child.queue_free()
+	for child in gui.get_children(): child.queue_free() # 清除Game Over界面
 	
 	var player = GlobalPlayerManager.player # 获取现有信息
 	# 获取当前正在运行的关卡节点,也就是WorldContainer下第一个节点
@@ -68,5 +66,4 @@ func _on_respawn(): # 重生逻辑
 		player.revive() # 唤醒玩家
 
 func _clear_world(): # 辅助函数：清空世界容器
-	for child in world_container.get_children():
-		child.queue_free()
+	for child in world_container.get_children(): child.queue_free()

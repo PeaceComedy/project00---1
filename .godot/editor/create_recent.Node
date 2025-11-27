@@ -1,5 +1,8 @@
-CenterContainer
+CollisionShape2D
+Area2D
+Sprite2D
 Node2D
+CenterContainer
 Marker2D
 Button
 VBoxContainer
@@ -8,7 +11,4 @@ Control
 MarginContainer
 TextureRect
 Label
-CollisionShape2D
-Area2D
 TextEdit
-Sprite2D

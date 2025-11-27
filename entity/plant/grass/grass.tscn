@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://fguvfkka0n7f" path="res://asset/YouTube Action RPG Resources/world/grass.png" id="1_d14sn"]
 [ext_resource type="Script" uid="uid://b8etrpch82u5p" path="res://entity/plant/grass/grass.gd" id="1_f34ti"]
 [ext_resource type="Texture2D" uid="uid://bn7u4ldod5vkw" path="res://asset/YouTube Action RPG Resources/effects/grass_effect.png" id="2_xe2g6"]
-[ext_resource type="Script" uid="uid://lta4n4khes26" path="res://system/damagebox_system/hurtbox.gd" id="4_alfv7"]
+[ext_resource type="Script" uid="uid://lta4n4khes26" path="res://damagebox/hurtbox.gd" id="4_alfv7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nduxg"]
 atlas = ExtResource("2_xe2g6")
