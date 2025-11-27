@@ -452,19 +452,26 @@ position = Vector2(325, 194)
 [node name="BatEnemy3" parent="." instance=ExtResource("8_y1ys1")]
 position = Vector2(288, 280)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="HeartUI" parent="UI" instance=ExtResource("9_mtuhj")]
+[node name="HeartUI" parent="GUI" instance=ExtResource("9_mtuhj")]
 offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="PauserMenu" parent="." instance=ExtResource("9_bgdb8")]
+[node name="PauserMenu" parent="GUI" instance=ExtResource("9_bgdb8")]
+visible = false
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("11_4x7d3")]
 position = Vector2(-24, 256)
 
+[node name="Entrance" type="Node2D" parent="."]
+position = Vector2(-72, 384)
+
+[node name="FromLevel02" type="Marker2D" parent="Entrance"]
+position = Vector2(368, -504)
+
 [node name="LevelTransition" parent="." instance=ExtResource("12_kdgnc")]
-position = Vector2(304, -144)
+position = Vector2(312, -144)
 target_scene_path = "uid://8q5yw0pfh26m"
-target_entry_point = "SouthEntrance"
+target_entry_point = "FromLevel01"

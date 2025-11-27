@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=4 uid="uid://8q5yw0pfh26m"]
+[gd_scene load_steps=15 format=4 uid="uid://8q5yw0pfh26m"]
 
+[ext_resource type="Script" uid="uid://bbyjnv4hhsva8" path="res://level/level_02/level_02.gd" id="1_hw0fb"]
 [ext_resource type="Texture2D" uid="uid://m1u7d3ryfxfd" path="res://asset/YouTube Action RPG Resources/world/grass_background.png" id="1_vk5g8"]
 [ext_resource type="Texture2D" uid="uid://b678umcoff6bo" path="res://asset/YouTube Action RPG Resources/world/dirt_tileset.png" id="2_hw0fb"]
 [ext_resource type="TileSet" uid="uid://t4voj8ji28is" path="res://level/tileset/cliff_tileset.tres" id="3_mg46l"]
@@ -7,9 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://wfhju7lox5qm" path="res://entity/plant/tree.tscn" id="5_7ehku"]
 [ext_resource type="PackedScene" uid="uid://cuhmeprt1eop5" path="res://entity/plant/grass/grass.tscn" id="6_ccolt"]
 [ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="7_ccrno"]
-[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://gui/menu/pauser_menu/pauser_menu.gd" id="8_vh628"]
 [ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://gui/heart_ui/heart_ui.tscn" id="9_weey5"]
-[ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn/player_spawn.tscn" id="10_7b8ce"]
+[ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn/player_spawn.tscn" id="11_hw0fb"]
+[ext_resource type="PackedScene" uid="uid://b1ir18idfi8xy" path="res://gui/menu/pauser_menu/pauser_menu.tscn" id="11_vk5g8"]
+[ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="12_hw0fb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nt0ed"]
 texture = ExtResource("2_hw0fb")
@@ -350,6 +352,8 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_nt0ed")
 
 [node name="World2" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_hw0fb")
 
 [node name="GroundLayer" type="Node2D" parent="."]
 z_index = -10
@@ -448,20 +452,26 @@ position = Vector2(264, 288)
 [node name="BatEnemy3" parent="." instance=ExtResource("7_ccrno")]
 position = Vector2(168, 144)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="Pauser" type="Node2D" parent="UI"]
-process_mode = 3
-script = ExtResource("8_vh628")
-metadata/_custom_type_script = "uid://b07nn1ib0kduk"
-
-[node name="HeartUI" parent="UI" instance=ExtResource("9_weey5")]
+[node name="HeartUI" parent="GUI" instance=ExtResource("9_weey5")]
 offset_right = 0.0
 offset_bottom = 0.0
 metadata/_edit_use_anchors_ = true
 
-[node name="PlayerSpawn" parent="." instance=ExtResource("10_7b8ce")]
-position = Vector2(-56, 320)
+[node name="PauserMenu" parent="GUI" instance=ExtResource("11_vk5g8")]
+visible = false
 
-[node name="SouthEntrance" type="Marker2D" parent="."]
+[node name="PlayerSpawn" parent="." instance=ExtResource("11_hw0fb")]
+position = Vector2(-24, 256)
+
+[node name="Entrance" type="Node2D" parent="."]
 position = Vector2(-72, 384)
+
+[node name="FromLevel01" type="Marker2D" parent="Entrance"]
+position = Vector2(16, -24)
+
+[node name="LevelTransition" parent="." instance=ExtResource("12_hw0fb")]
+position = Vector2(-72, 384)
+target_scene_path = "uid://dpg05jhwpbdme"
+target_entry_point = "FromLevel02"

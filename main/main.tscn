@@ -1,13 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://da6w1pypfceck"]
+[gd_scene load_steps=6 format=3 uid="uid://da6w1pypfceck"]
 
 [ext_resource type="Script" uid="uid://dmtg88vpeungl" path="res://main/main.gd" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://c247befs741ui" path="res://gui/menu/main_menu/main_menu.tscn" id="2_c651c"]
 [ext_resource type="PackedScene" uid="uid://dpg05jhwpbdme" path="res://level/level_01/level_01.tscn" id="2_pjrb6"]
 [ext_resource type="PackedScene" uid="uid://36ks6dxrsrk0" path="res://entity/player/player.tscn" id="2_xwkvk"]
+[ext_resource type="PackedScene" uid="uid://csbx0wkgac1br" path="res://gui/menu/game_over_menu/gameover_menu.tscn" id="5_3wy1v"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_53q0u")
 main_menu_scene = ExtResource("2_c651c")
+game_over_menu_scene = ExtResource("5_3wy1v")
 default_player = ExtResource("2_xwkvk")
 first_level = ExtResource("2_pjrb6")
 

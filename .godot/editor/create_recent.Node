@@ -1,7 +1,8 @@
+CenterContainer
+Node2D
 Marker2D
 Button
 VBoxContainer
-CenterContainer
 ColorRect
 Control
 MarginContainer
@@ -11,4 +12,3 @@ CollisionShape2D
 Area2D
 TextEdit
 Sprite2D
-CanvasLayer

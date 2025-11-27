@@ -36,6 +36,7 @@ func die() -> void: # 死亡
 	hide() # 隐藏玩家
 	remove_from_group("player") # 移出组，确保敌人不会在玩家死后抽风
 	process_mode = Node.PROCESS_MODE_DISABLED # 节点处理属性变为禁用，确保摄像机定在死亡位置
+	GlobalPlayerManager.player_died.emit() # # 通知全局管理器玩家死了
 	
 func take_hit(other_hitbox: Hitbox) -> void: # 定义函数：变为击退状态
 	stats.health -= other_hitbox.damage # 击退时，受到指定伤害扣除血量
