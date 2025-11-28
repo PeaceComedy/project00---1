@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbfjr5csgh24e" path="res://entity/player/player.gd" id="1_cm2cf"]
 [ext_resource type="Texture2D" uid="uid://b32ox37bdicrp" path="res://asset/YouTube Action RPG Resources/player/player.png" id="2_cm2cf"]
-[ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://resource/stats/player_stats.tres" id="2_rkmeh"]
+[ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://resource/stats/player_stats.tres" id="2_wjhpj"]
 [ext_resource type="Texture2D" uid="uid://cdw0wnnskleja" path="res://asset/YouTube Action RPG Resources/shadows/medium_shadow.png" id="3_6smn3"]
 [ext_resource type="Script" uid="uid://cj6vsdp3mjx6x" path="res://damagebox/hitbox.gd" id="4_5lop3"]
 [ext_resource type="Script" uid="uid://lta4n4khes26" path="res://damagebox/hurtbox.gd" id="6_rkmeh"]
@@ -658,7 +658,7 @@ collision_layer = 8
 collision_mask = 4
 motion_mode = 1
 script = ExtResource("1_cm2cf")
-stats = ExtResource("2_rkmeh")
+stats = ExtResource("2_wjhpj")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -10)

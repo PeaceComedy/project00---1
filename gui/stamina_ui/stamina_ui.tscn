@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://tt0ue8v6xfov"]
+
+[ext_resource type="Script" uid="uid://b1qn6yyurkou2" path="res://gui/stamina_ui/stamina_ui.gd" id="1_7f7py"]
+[ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://resource/stats/player_stats.tres" id="2_rnwt5"]
+[ext_resource type="Texture2D" uid="uid://cy7mpf2umhtxn" path="res://asset/UI/ValueBar_128x16.png" id="3_5rii8"]
+[ext_resource type="Texture2D" uid="uid://c2p5r3ngacffc" path="res://asset/UI/ValueBlue_120x8.png" id="4_vu6xk"]
+
+[node name="StaminaUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7f7py")
+stats = ExtResource("2_rnwt5")
+
+[node name="StaminaBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+value = 50.0
+texture_under = ExtResource("3_5rii8")
+texture_progress = ExtResource("4_vu6xk")
+texture_progress_offset = Vector2(4, 4)

@@ -1,12 +1,12 @@
 extends CharacterBody2D
 class_name Player
 
-const MOVE_SPEED = 100.0
 const ROLL_SPEED = 125.0
+const ROLL_STAMINA_COST = 25.0 # 翻滚消耗耐力值
 
-@export var stats: Stats
-var input_vector := Vector2.ZERO # 输入向量，默认给到输入(0,0)
-var last_input_vector = Vector2.DOWN # 最后输入向量，确保不会原地翻滚
+@export var stats: PlayerStats
+var input_vector := Vector2.ZERO # 输入向量，默认给到(0,0)
+var last_input_vector = Vector2.DOWN # 记录最后输入的向量，确保不会原地翻滚
 
 @onready var animation_tree: AnimationTree = $AnimationTree
 @onready var playback = animation_tree.get("parameters/StateMachine/playback") as AnimationNodeStateMachinePlayback
@@ -19,8 +19,11 @@ func _ready() -> void:
 	GlobalPlayerManager.player = self # 主动注册：告诉Manager我来了
 	hurtbox.hurt.connect(take_hit.call_deferred) # 受击框受伤状态连接，触发击退状态（在当前帧末尾）
 	stats.no_health.connect(die) # 没血时死亡
+	stats.stamina = stats.max_stamina # 游戏开始时把耐力回满
 
 func _physics_process(delta: float) -> void:
+	stats.process_stamina_regen(delta) # 每帧调用stats里的恢复函数
+	
 	var state = playback.get_current_node() # 定义变量：状态，等同于获取动画树中当前状态
 	match state: # 匹配执行不同的状态
 		"MoveState": move_state(delta) # 移动状态时，调用移动状态函数
@@ -63,9 +66,11 @@ func move_state(delta: float) -> void: # 移动状态，并接受与物理过程
 		playback.travel("AttackState")
 	
 	if Input.is_action_just_pressed("roll"): # 如果按下翻滚键，移动状态切换为翻滚状态
-		playback.travel("RollState")
+		if stats.stamina >= ROLL_STAMINA_COST: # 检查耐力
+			stats.stamina -= ROLL_STAMINA_COST # 扣除耐力
+			playback.travel("RollState") # 执行翻滚
 	
-	velocity = input_vector * MOVE_SPEED # 实际移动速度=输入向量*移动速度
+	velocity = input_vector * stats.move_speed # 实际移动速度=输入向量*移动速度
 	move_and_slide()
 
 func roll_state(delta: float) -> void: # 翻滚状态，并接受与物理过程相同的delta变量

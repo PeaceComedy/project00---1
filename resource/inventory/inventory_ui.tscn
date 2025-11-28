@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3fp5710olw7"]
+
+[ext_resource type="Script" uid="uid://bihgho2ra07w" path="res://resource/inventory/inventory_ui.gd" id="1_hpgb0"]
+[ext_resource type="PackedScene" uid="uid://boy1q5nblofnu" path="res://resource/inventory/inventory_slot.tscn" id="2_gnfhd"]
+[ext_resource type="Script" uid="uid://dma67lmadlnjq" path="res://resource/inventory/draggable_window.gd" id="2_nijlb"]
+
+[node name="InventoryUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hpgb0")
+inventory_slot_scene = ExtResource("2_gnfhd")
+
+[node name="Window" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -75.0
+offset_right = -79.99991
+offset_bottom = 75.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("2_nijlb")
+
+[node name="MarginContainer" type="MarginContainer" parent="Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="Window/MarginContainer"]
+layout_mode = 2
+columns = 5

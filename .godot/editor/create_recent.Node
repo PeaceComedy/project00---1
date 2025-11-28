@@ -1,3 +1,9 @@
+TextureProgressBar
+MarginContainer
+Panel
+GridContainer
+ColorRect
+TextureRect
 CollisionShape2D
 Area2D
 Sprite2D
@@ -6,9 +12,3 @@ CenterContainer
 Marker2D
 Button
 VBoxContainer
-ColorRect
-Control
-MarginContainer
-TextureRect
-Label
-TextEdit

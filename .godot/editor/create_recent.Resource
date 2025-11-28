@@ -1,2 +1,3 @@
+Stats
 Item
 Resource

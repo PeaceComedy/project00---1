@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dpg05jhwpbdme"]
+[gd_scene load_steps=18 format=4 uid="uid://dpg05jhwpbdme"]
 
 [ext_resource type="Script" uid="uid://do8cgehu5vswl" path="res://level/level.gd" id="1_b42xx"]
 [ext_resource type="Texture2D" uid="uid://m1u7d3ryfxfd" path="res://asset/YouTube Action RPG Resources/world/grass_background.png" id="1_sopxd"]
@@ -9,10 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://cuhmeprt1eop5" path="res://entity/plant/grass/grass.tscn" id="7_se62r"]
 [ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="8_y1ys1"]
 [ext_resource type="PackedScene" uid="uid://b1ir18idfi8xy" path="res://gui/menu/pauser_menu/pauser_menu.tscn" id="9_bgdb8"]
-[ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://gui/heart_ui/heart_ui.tscn" id="9_mtuhj"]
+[ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://gui/health_ui/health_ui.tscn" id="9_mtuhj"]
 [ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn.tscn" id="11_4x7d3"]
+[ext_resource type="PackedScene" uid="uid://tt0ue8v6xfov" path="res://gui/stamina_ui/stamina_ui.tscn" id="11_gw4w3"]
 [ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="12_kdgnc"]
-[ext_resource type="PackedScene" uid="uid://5cyolwedml1d" path="res://level/pickup/Pickup.tscn" id="13_xopy7"]
+[ext_resource type="PackedScene" uid="uid://5cyolwedml1d" path="res://level/pickup/pickup.tscn" id="13_xopy7"]
 [ext_resource type="Resource" uid="uid://b7ivi8xr108w6" path="res://resource/item/consumables/health_potion.tres" id="14_gw4w3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x2vst"]
@@ -456,10 +457,12 @@ position = Vector2(288, 280)
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="HeartUI" parent="GUI" instance=ExtResource("9_mtuhj")]
-offset_right = 0.0
-offset_bottom = 0.0
-metadata/_edit_use_anchors_ = true
+[node name="HealthUI" parent="GUI" instance=ExtResource("9_mtuhj")]
+scale = Vector2(1.2, 1.2)
+
+[node name="StaminaUI" parent="GUI" instance=ExtResource("11_gw4w3")]
+offset_top = 19.0
+offset_bottom = 19.0
 
 [node name="PauserMenu" parent="GUI" instance=ExtResource("9_bgdb8")]
 visible = false
@@ -479,5 +482,5 @@ target_scene_path = "uid://8q5yw0pfh26m"
 target_entry_point = "FromLevel01"
 
 [node name="Pickup" parent="." instance=ExtResource("13_xopy7")]
-position = Vector2(160, 144)
+position = Vector2(-64, 224)
 item_resource = ExtResource("14_gw4w3")

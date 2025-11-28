@@ -7,6 +7,8 @@ extends Node
 @onready var world_container: Node2D = $WorldContainer
 @onready var gui: CanvasLayer = $GUI
 
+var current_main_menu_instance: Node = null # 用来存储当前的主菜单实例
+var current_game_over_menu: Node = null # 用来存储当前打开的死亡菜单
 
 func _ready():
 	GlobalPlayerManager.player_scene = default_player # 初始化全局玩家配置
@@ -17,15 +19,16 @@ func _ready():
 func load_main_menu(): # 加载主菜单
 	_clear_world() # 清空旧关卡
 	if main_menu_scene:
-		var menu_instance = main_menu_scene.instantiate() # 实例化主菜单
-		gui.add_child(menu_instance)
+		current_main_menu_instance = main_menu_scene.instantiate()
+		gui.add_child(current_main_menu_instance)
 		# 连接信号：当菜单发出"start_game"时，执行_on_game_started
-		if menu_instance.has_signal("start_game"): 
-			menu_instance.start_game.connect(_on_game_start)
+		if current_main_menu_instance.has_signal("start_game"): 
+			current_main_menu_instance.start_game.connect(_on_game_start)
 
 func _on_game_start(): # 开始游戏
-	for child in gui.get_children(): # 清除GUI里的主菜单
-		child.queue_free()
+	if current_main_menu_instance:
+		current_main_menu_instance.queue_free()
+		current_main_menu_instance = null
 	load_level(first_level) # 加载第一关
 
 func load_level(level_packed: PackedScene): # 加载关卡
@@ -49,13 +52,14 @@ func _on_global_level_changed(next_scene_path: String, target_point_name: String
 
 func _on_player_died(): # 玩家死亡处理
 	if game_over_menu_scene: # 实例化GameOver界面
-		var game_over_instance = game_over_menu_scene.instantiate()
-		gui.add_child(game_over_instance)
-		if game_over_instance.has_signal("respawn_requested"): # 连接UI的重生信号
-			game_over_instance.respawn_requested.connect(_on_respawn)
+		current_game_over_menu = game_over_menu_scene.instantiate()
+		gui.add_child(current_game_over_menu)
+		if current_game_over_menu.has_signal("respawn_requested"): # 连接UI的重生信号
+			current_game_over_menu.respawn_requested.connect(_on_respawn)
 
 func _on_respawn(): # 重生逻辑
-	for child in gui.get_children(): child.queue_free() # 清除Game Over界面
+	current_game_over_menu.queue_free() # 清除Game Over界面
+	current_game_over_menu = null # 清空引用，防止后续误判
 	
 	var player = GlobalPlayerManager.player # 获取现有信息
 	# 获取当前正在运行的关卡节点,也就是WorldContainer下第一个节点
