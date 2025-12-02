@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://csbx0wkgac1br"]
 
 [ext_resource type="FontFile" uid="uid://uyewgfmr7n1s" path="res://asset/font/Uranus_Pixel_11Px.ttf" id="1_0cqoo"]
-[ext_resource type="Script" uid="uid://dlolpia3m2ql0" path="res://gui/menu/game_over_menu/gameover_menu.gd" id="1_5s7bw"]
+[ext_resource type="Script" uid="uid://dlolpia3m2ql0" path="res://ui/menu/game_over_menu/gameover_menu.gd" id="1_5s7bw"]
 
 [node name="GameOverMenu" type="Control"]
 layout_mode = 3

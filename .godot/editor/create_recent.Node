@@ -1,3 +1,5 @@
+Control
+CanvasLayer
 TextureProgressBar
 MarginContainer
 Panel
@@ -11,4 +13,3 @@ Node2D
 CenterContainer
 Marker2D
 Button
-VBoxContainer

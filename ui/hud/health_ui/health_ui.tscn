@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6j38g5whfif7"]
 
-[ext_resource type="Script" uid="uid://gkx12i5bpedb" path="res://gui/health_ui/health_ui.gd" id="1_wmkan"]
+[ext_resource type="Script" uid="uid://gkx12i5bpedb" path="res://ui/hud/health_ui/health_ui.gd" id="1_wmkan"]
 [ext_resource type="Resource" uid="uid://cu7mhlacho7o0" path="res://resource/stats/player_stats.tres" id="2_u30oy"]
 [ext_resource type="Texture2D" uid="uid://cy7mpf2umhtxn" path="res://asset/UI/ValueBar_128x16.png" id="3_wmkan"]
 [ext_resource type="Texture2D" uid="uid://n8v3m8haf5uy" path="res://asset/UI/ValueRed_120x8.png" id="4_u30oy"]

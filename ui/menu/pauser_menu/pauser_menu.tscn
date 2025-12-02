@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1ir18idfi8xy"]
 
-[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://gui/menu/pauser_menu/pauser_menu.gd" id="1_w4br1"]
+[ext_resource type="Script" uid="uid://b07nn1ib0kduk" path="res://ui/menu/pauser_menu/pauser_menu.gd" id="1_w4br1"]
 [ext_resource type="FontFile" uid="uid://uyewgfmr7n1s" path="res://asset/font/Uranus_Pixel_11Px.ttf" id="2_2btc8"]
 
 [node name="PauserMenu" type="Control"]

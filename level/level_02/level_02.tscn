@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://8q5yw0pfh26m"]
+[gd_scene load_steps=13 format=4 uid="uid://8q5yw0pfh26m"]
 
 [ext_resource type="Script" uid="uid://do8cgehu5vswl" path="res://level/level.gd" id="1_hw0fb"]
 [ext_resource type="Texture2D" uid="uid://m1u7d3ryfxfd" path="res://asset/YouTube Action RPG Resources/world/grass_background.png" id="1_vk5g8"]
@@ -8,10 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://wfhju7lox5qm" path="res://entity/plant/tree.tscn" id="5_7ehku"]
 [ext_resource type="PackedScene" uid="uid://cuhmeprt1eop5" path="res://entity/plant/grass/grass.tscn" id="6_ccolt"]
 [ext_resource type="PackedScene" uid="uid://ruytnrw8fqjn" path="res://entity/enemy/bat_emeny/bat_emeny.tscn" id="7_ccrno"]
-[ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://gui/health_ui/health_ui.tscn" id="9_weey5"]
-[ext_resource type="PackedScene" uid="uid://tt0ue8v6xfov" path="res://gui/stamina_ui/stamina_ui.tscn" id="10_mg46l"]
 [ext_resource type="PackedScene" uid="uid://dkbr7sovueid7" path="res://level/player_spawn.tscn" id="11_hw0fb"]
-[ext_resource type="PackedScene" uid="uid://b1ir18idfi8xy" path="res://gui/menu/pauser_menu/pauser_menu.tscn" id="11_vk5g8"]
 [ext_resource type="PackedScene" uid="uid://6pyx3dejriey" path="res://level/level_transition/level_transition.tscn" id="12_hw0fb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nt0ed"]
@@ -391,7 +388,7 @@ position = Vector2(280, 200)
 position = Vector2(24, 176)
 
 [node name="Bush3" parent="." instance=ExtResource("4_yakuy")]
-position = Vector2(208, 144)
+position = Vector2(240, 144)
 
 [node name="Tree" parent="." instance=ExtResource("5_7ehku")]
 position = Vector2(248, 240)
@@ -452,18 +449,6 @@ position = Vector2(264, 288)
 
 [node name="BatEnemy3" parent="." instance=ExtResource("7_ccrno")]
 position = Vector2(168, 144)
-
-[node name="GUI" type="CanvasLayer" parent="."]
-
-[node name="HealthUI" parent="GUI" instance=ExtResource("9_weey5")]
-scale = Vector2(1.2, 1.2)
-
-[node name="StaminaUI" parent="GUI" instance=ExtResource("10_mg46l")]
-offset_top = 19.0
-offset_bottom = 19.0
-
-[node name="PauserMenu" parent="GUI" instance=ExtResource("11_vk5g8")]
-visible = false
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("11_hw0fb")]
 position = Vector2(160, 72)
