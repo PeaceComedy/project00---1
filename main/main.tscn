@@ -11,12 +11,12 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_67ri8"]
 shader = ExtResource("7_4dugh")
-shader_parameter/curvature = 2.800000133
-shader_parameter/scanline_alpha = 0.90000004275
+shader_parameter/curvature = 2.50000011875
+shader_parameter/scanline_alpha = 0.950000045125
 shader_parameter/scanline_count = 240.0000114
 shader_parameter/speed = 13.678000649705
 shader_parameter/noise_amount = 0.0800000038
-shader_parameter/aberration = 0.0030000001425
+shader_parameter/aberration = 0.0
 shader_parameter/roll_on = true
 shader_parameter/roll_speed = 2.000001045000001
 shader_parameter/roll_size = 16.00000076
@@ -25,7 +25,7 @@ shader_parameter/distort_intensity = 0.0050000002375
 shader_parameter/roll_noise_opacity = 0.050000002375
 shader_parameter/discolor = true
 shader_parameter/saturation = 1.0
-shader_parameter/contrast = 1.2
+shader_parameter/contrast = 1.0000000475
 
 [node name="Main" type="Node"]
 script = ExtResource("1_53q0u")

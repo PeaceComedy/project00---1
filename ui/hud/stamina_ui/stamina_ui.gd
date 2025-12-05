@@ -1,16 +1,23 @@
 extends Control
 
-@export var stats: PlayerStats # UI直接和数据连接，不需要知道Player在哪里
+@export var stats: PlayerStats
+@export var total_blocks: int = 20 # 设定视觉上的总格数
 
 @onready var stamina_bar: TextureProgressBar = $StaminaBar
 
 func _ready() -> void:
-	stamina_bar.max_value = stats.max_stamina # 初始化最大值和当前值
-	stamina_bar.value = stats.stamina 
+	stamina_bar.max_value = total_blocks # 初始化进度条设置为“格子模式”
+	stamina_bar.step = 1 # 强制整数步进，确保不会显示半个格子
 	
-	stats.stamina_changed.connect(update_stamina) # 连接信号：当stats的stamina变了，更新数值
+	update_stamina(stats.stamina) # 初始化显示
+	
+	stats.stamina_changed.connect(update_stamina) # 连接信号
 
-func update_stamina(new_amount: float) -> void: # 更新当前耐力值
-	stamina_bar.value = new_amount
-	var tween = create_tween() # 创建一个动画补间，做平滑过渡
-	tween.tween_property(stamina_bar, "value", new_amount, 0.1) # 在0.1秒内将value属性变为new_amount
+
+func update_stamina(new_amount: float) -> void:
+	# 核心算法：向上取整 (Ceil)，只有当这一个“块”内的耐力完全耗尽，格子才会消失
+	var percentage = new_amount / stats.max_stamina
+	var visible_blocks = ceil(percentage * total_blocks)
+	
+	stamina_bar.value = visible_blocks # 赋值
+	

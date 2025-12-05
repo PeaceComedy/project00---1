@@ -1,3 +1,7 @@
-res://main/main.tscn
+res://ui/hud/hud.tscn
 res://level/tileset/cliff_tileset.tres
 res://main/crt.gdshader
+res://main/main.tscn
+res://ui/hud/radar_ui/radar_ui.tscn
+res://ui/hud/radar_ui/radar_ui.gd
+res://entity/enemy/bat_emeny/bat_emeny.tscn

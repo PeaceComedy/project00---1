@@ -9,8 +9,8 @@
 
 [sub_resource type="Resource" id="Resource_0bcub"]
 script = ExtResource("2_8yl8f")
-health = 3
 max_health = 3
+health = 3
 metadata/_custom_type_script = "uid://3526k5utonog"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_453fi"]
@@ -193,7 +193,7 @@ radius = 4.1231055
 [sub_resource type="CircleShape2D" id="CircleShape2D_uq535"]
 radius = 4.1231055
 
-[node name="BatEnemy" type="CharacterBody2D"]
+[node name="BatEnemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 16
 collision_mask = 20
 motion_mode = 1

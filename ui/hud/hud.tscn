@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c3dbeeopaklbu"]
+[gd_scene load_steps=6 format=3 uid="uid://c3dbeeopaklbu"]
 
 [ext_resource type="PackedScene" uid="uid://6j38g5whfif7" path="res://ui/hud/health_ui/health_ui.tscn" id="1_4d6w6"]
 [ext_resource type="PackedScene" uid="uid://tt0ue8v6xfov" path="res://ui/hud/stamina_ui/stamina_ui.tscn" id="2_e0nub"]
 [ext_resource type="PackedScene" uid="uid://b1ir18idfi8xy" path="res://ui/menu/pauser_menu/pauser_menu.tscn" id="3_e0nub"]
 [ext_resource type="PackedScene" uid="uid://cl3fp5710olw7" path="res://resource/inventory/inventory_ui.tscn" id="4_w75iv"]
+[ext_resource type="PackedScene" uid="uid://brx5xj7at1s7h" path="res://ui/hud/radar_ui/radar_ui.tscn" id="5_imuuq"]
 
 [node name="HUD" type="Control"]
 layout_mode = 3
@@ -14,13 +15,36 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="HealthUI" parent="." instance=ExtResource("1_4d6w6")]
-layout_mode = 0
-scale = Vector2(1.2, 1.2)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = -50.0
+offset_right = 15.0
+offset_bottom = -50.0
+grow_vertical = 0
+scale = Vector2(0.3, 0.3)
 
 [node name="StaminaUI" parent="." instance=ExtResource("2_e0nub")]
 layout_mode = 0
-offset_top = 19.0
-offset_bottom = 19.0
+offset_left = 15.0
+offset_top = 240.0
+offset_right = 15.0
+offset_bottom = 240.0
+scale = Vector2(0.3, 0.3)
+
+[node name="RadarUI" parent="." instance=ExtResource("5_imuuq")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_top = 12.0
+offset_right = -20.0
+offset_bottom = 112.0
+grow_horizontal = 0
+scale = Vector2(0.8, 0.8)
 
 [node name="PauserMenu" parent="." instance=ExtResource("3_e0nub")]
 visible = false

@@ -32,6 +32,7 @@ mouse_cursor/custom_image="uid://ot5b3twb0pwt"
 [global_group]
 
 player=""
+enemies=""
 
 [input]
 
