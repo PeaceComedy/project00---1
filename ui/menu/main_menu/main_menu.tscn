@@ -60,10 +60,10 @@ text = "START"
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_omy8q")
 theme_override_font_sizes/font_size = 22
-text = "Settings"
+text = "SETTINGS"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_omy8q")
 theme_override_font_sizes/font_size = 22
-text = "Quit"
+text = "QUIT"

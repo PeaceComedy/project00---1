@@ -23,6 +23,7 @@ offset_top = 19.0
 offset_bottom = 19.0
 
 [node name="PauserMenu" parent="." instance=ExtResource("3_e0nub")]
+visible = false
 layout_mode = 1
 
 [node name="InventoryUI" parent="." instance=ExtResource("4_w75iv")]

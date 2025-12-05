@@ -60,6 +60,8 @@ func _on_global_level_changed(next_scene_path: String, target_point_name: String
 		GlobalPlayerManager.player.global_position = entry_point.global_position
 
 func _on_player_died(): # 玩家死亡处理
+	if current_game_over_menu != null: return # 如果界面已经存在，直接返回，防止重复生成
+	
 	hud.visible = false
 	current_game_over_menu = game_over_menu_scene.instantiate() # 实例化GameOver界面
 	gui.add_child(current_game_over_menu)
@@ -77,6 +79,7 @@ func _on_respawn(): # 重生逻辑
 		var spawn_point = current_level_node.find_child("PlayerSpawn") # 在当前地图里找出生点
 		player.global_position = spawn_point.global_position # 搬运玩家
 		player.revive() # 唤醒玩家
+		hud.visible = true
 
 func _clear_world(): # 清空世界容器
 	for child in world_container.get_children(): child.queue_free()

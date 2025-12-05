@@ -1,7 +1,3 @@
-res://entity/player/player.tscn
-res://level/tileset/cliff_tileset.tres
-res://resource/stats/player_stats.tres
-res://level/level_transition/level_transition.tscn
-res://main/main.gd
 res://main/main.tscn
-res://level/level_01/level_01.tscn
+res://level/tileset/cliff_tileset.tres
+res://main/crt.gdshader

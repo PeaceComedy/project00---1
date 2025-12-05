@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://da6w1pypfceck"]
+[gd_scene load_steps=10 format=3 uid="uid://da6w1pypfceck"]
 
 [ext_resource type="Script" uid="uid://dmtg88vpeungl" path="res://main/main.gd" id="1_53q0u"]
 [ext_resource type="PackedScene" uid="uid://c247befs741ui" path="res://ui/menu/main_menu/main_menu.tscn" id="2_c651c"]
@@ -6,6 +6,26 @@
 [ext_resource type="PackedScene" uid="uid://36ks6dxrsrk0" path="res://entity/player/player.tscn" id="2_xwkvk"]
 [ext_resource type="PackedScene" uid="uid://csbx0wkgac1br" path="res://ui/menu/game_over_menu/gameover_menu.tscn" id="5_3wy1v"]
 [ext_resource type="PackedScene" uid="uid://c3dbeeopaklbu" path="res://ui/hud/hud.tscn" id="6_4dugh"]
+[ext_resource type="Shader" uid="uid://bf2s22bfo17d4" path="res://main/crt.gdshader" id="7_4dugh"]
+[ext_resource type="Texture2D" uid="uid://74c4jd55s27s" path="res://asset/ParallaxBg_1.png" id="7_67ri8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_67ri8"]
+shader = ExtResource("7_4dugh")
+shader_parameter/curvature = 2.800000133
+shader_parameter/scanline_alpha = 0.90000004275
+shader_parameter/scanline_count = 240.0000114
+shader_parameter/speed = 13.678000649705
+shader_parameter/noise_amount = 0.0800000038
+shader_parameter/aberration = 0.0030000001425
+shader_parameter/roll_on = true
+shader_parameter/roll_speed = 2.000001045000001
+shader_parameter/roll_size = 16.00000076
+shader_parameter/roll_variation = 0.20000000624012
+shader_parameter/distort_intensity = 0.0050000002375
+shader_parameter/roll_noise_opacity = 0.050000002375
+shader_parameter/discolor = true
+shader_parameter/saturation = 1.0
+shader_parameter/contrast = 1.2
 
 [node name="Main" type="Node"]
 script = ExtResource("1_53q0u")
@@ -20,3 +40,25 @@ hud_scene = ExtResource("6_4dugh")
 [node name="GUI" type="CanvasLayer" parent="."]
 
 [node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="CRT" type="CanvasLayer" parent="."]
+layer = 100
+
+[node name="TextureRect" type="TextureRect" parent="CRT"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_67ri8")
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="CRT"]
+material = SubResource("ShaderMaterial_67ri8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
