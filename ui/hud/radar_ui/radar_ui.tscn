@@ -1,23 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://brx5xj7at1s7h"]
+[gd_scene load_steps=3 format=3 uid="uid://brx5xj7at1s7h"]
 
 [ext_resource type="Script" uid="uid://dme86v7x3yyx5" path="res://ui/hud/radar_ui/radar_ui.gd" id="1_gp5qn"]
+[ext_resource type="Texture2D" uid="uid://c5sld8w7xv3q7" path="res://asset/精灵-0002.png" id="2_jrs0p"]
 
 [node name="RadarUI" type="Control"]
-custom_minimum_size = Vector2(100, 100)
 layout_mode = 3
-anchors_preset = 0
-pivot_offset = Vector2(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -280.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_gp5qn")
 
-[node name="PlayerBlip" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 49.0
-offset_top = 49.0
-offset_right = -49.0
-offset_bottom = -49.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 1, 0, 1)
+texture = ExtResource("2_jrs0p")
+expand_mode = 1
